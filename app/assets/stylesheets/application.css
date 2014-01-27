@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+	margin: 0;
+}
+
+div#nav {
+	width: 100%;
+	border-bottom: 1px solid #000;
+	background-image: -moz-linear-gradient(top, #4A4A4A, #2B2B2B);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4A4A4A), to(#2B2B2B));
+	background-image: -webkit-linear-gradient(top, #4A4A4A, #2B2B2B);
+	background-image: -o-linear-gradient(top, #4A4A4A, #2B2B2B);
+	background-image: linear-gradient(to bottom, #4A4A4A, #2B2B2B);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A4A4Aff', endColorstr='#ff2B2B2B', GradientType=0);
+	padding: 10px;
+}
+
+div#nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#nav a:hover {
+	color: #FF9D00;
+}
+
+div#nav ul {
+	list-style: none;
+	margin: 0;
+}
+
+div#nav ul li {
+	display: inline;
+	padding: 0 10px;
+}
+
+div#content {
+	margin: 8px 10%;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #ddd;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+th {
+	border-bottom: 1px solid #ddd;
+}
+
+td {
+	padding: 5px;
+}

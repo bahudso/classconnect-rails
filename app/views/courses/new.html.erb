@@ -1,0 +1,34 @@
+<h1>New Course</h1>
+<%= form_for :course, url: courses_path do |f| %>
+  <% if @course.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@course.errors.count, "error") %> prohibited
+      this course from being saved:</h2>
+    <ul>
+    <% @course.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :section %><br>
+    <%= f.text_field :section %>
+  </p>
+
+  <p>
+    <%= f.label :teacher %><br>
+    <%= select_tag "teacher", options_from_collection_for_select(@teachers, "id", "name"), prompt: "Select a teacher" %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', posts_path %>

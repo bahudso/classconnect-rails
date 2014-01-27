@@ -1,0 +1,30 @@
+<h1>Editing teacher</h1>
+ 
+<%= form_for :teacher, url: teacher_path(@teacher), method: :put do |f| %>
+  <% if @teacher.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited
+      this teacher from being saved:</h2>
+    <ul>
+    <% @teacher.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', posts_path %>
